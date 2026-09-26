@@ -1,6 +1,7 @@
 package j1.s.p0009;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class J1SP0009 {
 
@@ -26,16 +27,47 @@ public class J1SP0009 {
                     continue;
                 }
 
-                System.out.println("The " + n + "sequence fibonacci: ");
-
+                ArrayList<Long> rs = new ArrayList<>();
                 for (int i = 0; i < n; i++) {
-                    System.out.print(fibonacci(i));
-                    if (i < n - 1) {
+                    rs.add(fibonacci(i));
+                }
+
+                System.out.println("The " + n + " sequence fibonacci: ");
+//                for (int i = 0; i < n; i++) {
+//                    System.out.print(fibonacci(i));
+//                    if (i < n - 1) {
+//                        System.out.print(", ");
+//                    }
+//                }
+                for (int j = 0; j < rs.size(); j++) {
+                    System.out.print(rs.get(j));
+
+                    if (j < rs.size() - 1) {
                         System.out.print(", ");
                     }
                 }
                 System.out.println();
+
+                System.out.print("Enter index: ");
+                while (true) {
+                    try {
+                        int id = Integer.parseInt(sc.nextLine().trim());
+                        if (id < 1 || id > rs.size()) {
+                            System.err.println("PLEASE ENTER BETWEEN 1-" + rs.size());
+                            System.out.print("ENTER AGAIN: ");
+                            continue;
+                        }
+
+                        System.out.println("Value at index " + id + " is: " + rs.get(id - 1));
+                        break;
+
+                    } catch (NumberFormatException e) {
+                        System.err.println("PLEASE ENTER BETWEEN 1-" + rs.size());
+                        System.out.print("ENTER AGAIN: ");
+                    }
+                }
                 break;
+
             } catch (NumberFormatException e) {
                 System.err.println("PLEASE ENTER INTEGER NUMBER");
                 System.out.print("Enter again: ");

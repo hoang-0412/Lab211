@@ -2,14 +2,8 @@ package j1.s.p0071;
 
 public class Task {
 
-    private int id;
-    private String taskTypeId;
-    private String requirementName;
-    private String date;
-    private String planFrom;
-    private String planTo;
-    private String assignee;
-    private String reviewer;
+    int id;
+    String taskTypeId, requirementName, date, planFrom, planTo, assignee, reviewer;
 
     public Task() {
 

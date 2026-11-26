@@ -49,11 +49,11 @@ public class Validation {
             System.out.print("Format: [HE/HA/HS + Your Cohort + 4 digits] Eg: HE181234,. Please enter again: ");
         }
     }
-    
+
     public static boolean isValidSemester(String id) {
         return id.matches("^(SP|SU|FA)\\d{2}$");
     }
-    
+
     public String checkInputSemester() {
         while (true) {
             String semester = sc.nextLine().trim().toUpperCase();

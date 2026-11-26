@@ -2,10 +2,7 @@ package j1.l.p0021;
 
 public class Student implements Comparable<Student> {
 
-    private String id;
-    private String studentName;
-    private String semester;
-    private String courseName;
+    String id, studentName, semester, courseName;
 
     public Student() {
 

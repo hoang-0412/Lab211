@@ -2,8 +2,7 @@ package j1.s.p0070;
 
 public class User {
 
-    private String account;
-    private String password;
+    String account, password;
 
     public User() {
 
